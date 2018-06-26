@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="quiz">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Learncodeonline.in is a platform to learn about programming and make projects with that knowledge. Access high quality videos at reasonable price.">  
+ 	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="Hitesh Choudhary">
+	<link rel="icon" href="../../../../favicon.ico">
+
+	<title>Quiz Page</title>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="src/jquery/highlighter/prettify.css">
+
+	<link rel="stylesheet" href="src/css/style.css">
+	<script src="src/angular/lib/angular1.6.js"></script>
+	<script src="src/angular/app.js"></script>
+	<!-- Custom styles for this template -->
+</head>
+
+
+<body>
+	<div class="main" ng-controller="quiz_controller">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand order-1" href="javascript:void(0)" style="margin-right:20px;"><img src="https://learnyst.s3.amazonaws.com/assets/schools/2410/resources/images/logo_lco_4dsl6o.png" style="  height:50px;width: auto;max-width: 250px;"></a> <button class="navbar-toggler order-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+					<ul class="navbar-nav mx-auto  order-2">
+						<li class="nav-item active 	quiz-title">
+							<a class="nav-link text-secondary" href="#"><b><span class="text-lgreen">Question</span>Arena</b> <span class="sr-only">(current)</span></a>
+						</li>
+
+
+					</ul>
+									<div id="navbarSupportedContent" style="" class="p-2 navbar-collapse order-4 collapse show">
+						<div class="for-form d-flex justify-content-center">
+					<form class="search-form">
+						<div class="form-group mb-0 has-feedback input-group">
+							<label for="search" class="sr-only">Search</label>
+							<input class="form-control" id="myInput" onkeyup="myFunction()" name="search " placeholder="search with question Titles" type="text">
+							<div class="input-group-append"><span class="form-control-feedback"><img src="src/img/find-icon-32.png" class="img img-fluid" alt=""></span>
+							</div>
+
+						</div>
+					</form></div>
+				</div></div>
+		</nav>
+	</div>
+
+
+	<div class="container pt-3 ">
+		<div class="row ">
+			<div class="col-md-12 pad-10">
+				<div class="table-responsive">
+					<table id="myTable" class="table table-bordered quiz-table">
+						<thead>
+							<tr>
+								<th colspan="2">Questions with Expalanations</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr > 
+								<td class="quiz-column">
+									<div id="accordion">
+										<div class="card mb-2">
+											<div class="card-header p-0" id="headingOne">
+												<p class="btn btn-link mb-0"  data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+													<b>Q.1 : </b><span class=""id="question">Explain Palindrome program.
+													</span></p>
+											</div>
+
+											<div id="collapseOne" class="collapse  p-3" aria-labelledby="headingOne" data-parent="#accordion">
+
+												<p><b>Ans. </b>Given a range of numbers, print all palindromes in the given range. For example if the given range is {10, 115}, then output should be {11, 22, 33, 44, 55, 66, 77, 88, 99, 101, 111}.</p>
+												<p>We can run a loop from min to max and check every number for palindrome. If number is palindrome, we can simply print it.</p>
+												<hr>
+												
+												<nav>
+													<div class="nav nav-tabs" id="nav-tab" role="tablist">
+														<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">C++</a>
+														<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Java</a> 
+														<a class="nav-item nav-link clip float-right" title="Copy to clipbord" data-clipboard-target=".tab-pane.active" style="position: absolute;right: 16px;"><img src="src/img/thin-0255_paste_clipboard-512.png" class="img img-fluid" alt="" width="20px" height="20px"></a>
+													</div>
+												</nav>
+												<div class="tab-content" id="nav-tabContent">
+													<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+														
+
+														<pre  class="prettyprint">
+// C++ Program to print all 
+// palindromes in a given range 
+
+#include &lt;iostream&gt;
+using namespace std;
+
+// A function to check if n is palindrome
+int isPalindrome(int n)
+{
+    // Find reverse of n
+    int rev = 0;
+    for (int i = n; i > 0; i /= 10)
+        rev = rev*10 + i%10;
+ 
+    // If n and rev are same, then n is palindrome
+    return (n==rev);
+}
+ 
+// prints palindrome between min and max
+void countPal(int min, int max)
+{
+    for (int i = min; i <= max; i++)
+        if (isPalindrome(i))
+          cout << i << " ";
+}
+ 
+// Driver program to test above function
+int main()
+{
+    countPal(100, 2000);
+    return 0;
+}
+</pre>
+
+
+													</div>
+													<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+														<pre  class="prettyprint">
+// Java Program to print all 
+// palindromes in a given range
+ 
+class GFG
+{
+     
+    // A function to check
+    // if n is palindrome
+    static int isPalindrome(int n)
+    {
+         
+        // Find reverse of n
+        int rev = 0;
+        for (int i = n; i > 0; i /= 10)
+            rev = rev * 10 + i % 10;
+             
+        // If n and rev are same, 
+        // then n is palindrome
+        return(n == rev) ? 1 : 0;
+    }
+     
+    // prints palindrome between
+    // min and max
+    static void countPal(int min, int max)
+    {
+        for (int i = min; i <= max; i++)
+            if (isPalindrome(i)==1)
+                System.out.print(i + " ");
+    }
+     
+    // Driver Code
+    public static void main(String args[])
+    {
+        countPal(100, 2000);
+    }
+}
+  	</pre>
+													</div>
+												</div>
+
+
+											</div>
+										</div>
+										<!--	2nd program		-->
+										<div class="mb-2">
+											<div class="card">
+												<div class="card-header p-0" id="headingtwo">
+
+													<p class="btn btn-link mb-0" data-toggle="collapse" data-target="#collapsetwo" aria-expanded="true" aria-controls="collapsetwo">
+														<b>Q.2 : </b><span id="question">Explain Fibonacci series.</span> </p>
+												</div>
+												<div id="collapsetwo" class="collapse p-3" aria-labelledby="headingtwo" data-parent="#accordion">
+
+													<p><b>Ans. </b>The Fibonacci numbers are the numbers in the following integer sequence.</p>
+													<p>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ……..</p>
+													<p>In mathematical terms, the sequence Fn of Fibonacci numbers is defined by the recurrence relation</p>
+													<hr>
+													<nav>
+														<div class="nav nav-tabs" id="nav-tab" role="tablist">
+															<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home2" role="tab" aria-controls="nav-home" aria-selected="true">C++</a>
+															<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile2" role="tab" aria-controls="nav-profile" aria-selected="false">Java</a>
+<a class="nav-item nav-link clip float-right" data-toggle="tooltip" data-placement="top" title="Copy to clipbord" data-clipboard-target=".tab-pane.active" style="position: absolute;right: 16px;"><img src="src/img/thin-0255_paste_clipboard-512.png" class="img img-fluid" alt="" width="20px" height="20px"></a>
+														</div>
+													</nav>
+													<div class="tab-content" id="nav-tabContent">
+														<div class="tab-pane fade show active" id="nav-home2" role="tabpanel" aria-labelledby="nav-home-tab">
+															<pre class="prettyprint">
+// Fibonacci Series up to n number of terms 
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    int n, t1 = 0, t2 = 1, nextTerm = 0;
+
+    cout << "Enter the number of terms: ";
+    cin >> n;
+
+    cout << "Fibonacci Series: ";
+
+    for (int i = 1; i <= n; ++i)
+    {
+        // Prints the first two terms.
+        if(i == 1)
+        {
+            cout << " " << t1;
+            continue;
+        }
+        if(i == 2)
+        {
+            cout << t2 << " ";
+            continue;
+        }
+        nextTerm = t1 + t2;
+        t1 = t2;
+        t2 = nextTerm;
+        
+        cout << nextTerm << " ";
+    }
+    return 0;
+}
+
+</pre>
+
+														</div>
+														<div class="tab-pane fade" id="nav-profile2" role="tabpanel" aria-labelledby="nav-profile-tab">
+															<pre class="prettyprint">
+// Java Program to find Fibonacci Series using Recursion
+class fibonacci
+{
+    static int fib(int n)
+    {
+    if (n <= 1)
+       return n;
+    return fib(n-1) + fib(n-2);
+    }
+      
+    public static void main (String args[])
+    {
+    int n = 9;
+    System.out.println(fib(n));
+    }
+}
+  	</pre>
+														</div>
+
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<!--	3rd program		-->
+										<div class="mb-2">
+											<div class="card">
+												<div class="card-header p-0" id="headingthree">
+
+													<p class="btn btn-link mb-0" data-toggle="collapse" data-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+														<b>Q.3 : </b>Explain Factorial Number. </p>
+
+												</div>
+
+												<div id="collapsethree" class="collapse p-3" aria-labelledby="headingthree" data-parent="#accordion">
+
+													<p><b>Ans. </b>Factorial of a non-negative integer, is multiplication of all integers smaller than or equal to n.</p>
+													<p>For example factorial of 6 is 6*5*4*3*2*1 which is 720.</p>
+													<hr>
+													<nav>
+														<div class="nav nav-tabs" id="nav-tab" role="tablist">
+															<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home3" role="tab" aria-controls="nav-home" aria-selected="true">C++</a>
+															<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile3" role="tab" aria-controls="nav-profile" aria-selected="false">Java</a>
+<a class="nav-item nav-link clip float-right"  title="Copy to clipbord" data-clipboard-target=".tab-pane.active" style="position: absolute;right: 16px;"><img src="src/img/thin-0255_paste_clipboard-512.png" class="img img-fluid" alt="" width="20px" height="20px"></a>
+														</div>
+													</nav>
+													<div class="tab-content" id="nav-tabContent">
+														<div class="tab-pane fade show active" id="nav-home3" role="tabpanel" aria-labelledby="nav-home-tab">
+															<pre class="prettyprint">
+// C++ Program to find Factorial of a given number 
+
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+    unsigned int n;
+    unsigned long long factorial = 1;
+
+    cout << "Enter a positive integer: ";
+    cin >> n;
+
+    for(int i = 1; i <=n; ++i)
+    {
+        factorial *= i;
+    }
+
+    cout << "Factorial of " << n << " = " << factorial;    
+    return 0;
+}
+
+</pre>
+
+														</div>
+														<div class="tab-pane fade" id="nav-profile3" role="tabpanel" aria-labelledby="nav-profile-tab">
+															<pre class="prettyprint">
+// Java program to find factorial of given number
+class Test
+{
+    // method to find factorial of given number
+    static int factorial(int n)
+    {
+        if (n == 0)
+          return 1;
+         
+        return n*factorial(n-1);
+    }
+     
+    // Driver method
+    public static void main(String[] args) 
+    {
+        int num = 5;
+        System.out.println("Factorial of "+ num + " is " + factorial(5));
+    }
+}
+  	</pre>
+														</div>
+														
+													</div>
+
+												</div>
+											</div>
+
+
+										</div>
+										<!--	4th program		-->
+										<div class="mb-2">
+											<div class="card">
+												<div class="card-header p-0" id="headingfour">
+
+													<p class="btn btn-link mb-0" data-toggle="collapse" data-target="#collapsefour" aria-expanded="true" aria-controls="collapsefour">
+														<b>Q.4 : </b>Explain Bubble sort. </p>
+
+												</div>
+
+												<div id="collapsefour" class="collapse p-3" aria-labelledby="headingfour" data-parent="#accordion">
+
+													<p><b>Ans. </b>Bubble sort is a sorting algorithm that works by repeatedly stepping through lists that need to be sorted, comparing each pair of adjacent items and swapping them if they are in the wrong order. This passing procedure is repeated until no swaps are required, indicating that the list is sorted. Bubble sort gets its name because smaller elements bubble toward the top of the list.</p>
+													<hr>
+													<nav>
+														<div class="nav nav-tabs" id="nav-tab" role="tablist">
+															<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home4" role="tab" aria-controls="nav-home" aria-selected="true">C++</a>
+															<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile4" role="tab" aria-controls="nav-profile" aria-selected="false">Java</a>
+<a class="nav-item nav-link clip float-right"  title="Copy to clipbord" data-clipboard-target=".tab-pane.active" style="position: absolute;right: 16px;"><img src="src/img/thin-0255_paste_clipboard-512.png" class="img img-fluid" alt="" width="20px" height="20px"></a>
+														</div>
+													</nav>
+													<div class="tab-content" id="nav-tabContent">
+														<div class="tab-pane fade show active" id="nav-home4" role="tabpanel" aria-labelledby="nav-home-tab">
+															<pre class="prettyprint">
+// C++ Program of bubble sort 
+
+#include &lt;iostream&gt; 
+using namespace std;
+ 
+int main()
+{
+    int a[50],n,i,j,temp;
+    cout<<"Enter the size of array: ";
+    cin>>n;
+    cout<<"Enter the array elements: "; 
+    
+    for(i=0;i<n;++i)
+        cin>>a[i];
+        
+    for(i=1;i<n;++i)
+    {
+        for(j=0; j <(n-i) ; ++j)
+            if(a[j]>a[j+1])
+            {
+                temp=a[j];
+                a[j]=a[j+1];
+                a[j+1]=temp;
+            }
+    }
+    
+    cout<<"Array after bubble sort:";
+    for(i=0;i &lt;n ;++i)
+        cout << " " < &lt; a[i];
+        
+    return 0;
+}
+</pre>
+
+														</div>
+														<div class="tab-pane fade" id="nav-profile4" role="tabpanel" aria-labelledby="nav-profile-tab">
+															<pre class="prettyprint">
+// Java program for implementation of Bubble Sort
+class BubbleSort
+{
+    void bubbleSort(int arr[])
+    {
+        int n = arr.length;
+        for (int i = 0; i < n-1; i++)
+            for (int j = 0; j < (n-i-1); j++)
+                if (arr[j] > arr[j+1])
+                {
+                    // swap temp and arr[i]
+                    int temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+    }
+ 
+    // Prints the array 
+    void printArray(int arr[])
+    {
+        int n = arr.length;
+        for (int i=0; i &lt; n ; i++)
+            
+            System.out.print(arr[i] + " ");
+        System.out.println();
+    }
+ 
+    // Driver method to test above
+    public static void main(String args[])
+    {
+        BubbleSort ob = new BubbleSort();
+        int arr[] = {64, 34, 25, 12, 22, 11, 90};
+        ob.bubbleSort(arr);
+        System.out.println("Sorted array");
+        ob.printArray(arr);
+    }
+}  
+</pre>
+														</div>
+
+													</div>
+
+
+												</div>
+											</div>
+
+										</div>
+										<!--	5th program		-->
+										<div class="mb-2">
+											<div class="card">
+												<div class="card-header p-0" id="headingfive">
+
+													<p class="btn btn-link mb-0" data-toggle="collapse" data-target="#collapsefive" aria-expanded="true" aria-controls="collapsefive">
+														<b>Q.5 : </b>Find third largest number in array. </p>
+
+												</div>
+
+												<div id="collapsefive" class="collapse p-3 " aria-labelledby="headingfiv" data-parent="#accordion">
+
+													<p><b>Ans. </b>Simplest way to solve this question is to first iterate through the array and find first maximum. Store this first maximum as well as its index. Now traverse the whole array finding the second max with the changed condition. Finally traverse the array third time and find the third largest element.</p>
+													<hr>
+													<nav>
+														<div class="nav nav-tabs" id="nav-tab" role="tablist">
+															<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home5" role="tab" aria-controls="nav-home" aria-selected="true">C++</a>
+															<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile5" role="tab" aria-controls="nav-profile" aria-selected="false">Java</a>
+<a class="nav-item nav-link clip  " title="Copy to clipbord" data-clipboard-target=".tab-pane.active"  style="position: absolute;right: 16px;"><img src="src/img/thin-0255_paste_clipboard-512.png "  class="img img-fluid" alt="" width="20px" height="20px"></a>
+														</div>
+													</nav>
+													<div class="tab-content" id="nav-tabContent">
+														<div class="tab-pane fade show active" id="nav-home5" role="tabpanel" aria-labelledby="nav-home-tab">
+															<pre class="prettyprint">
+// C++ program to find third Largest element in an array
+#include &lt;bits/stdc++.h&gt;
+ 
+void thirdLargest(int arr[], int arr_size)
+{
+    /* There should be atleast three elements */
+    if (arr_size < 3)
+    {
+       	cout<<" Invalid Input ";
+        return;
+    }
+ 
+    // Find first largest element
+    int first = arr[0];
+    for (int i = 1; i < arr_size ; i++)
+        if (arr[i] > first)
+            first = arr[i];
+ 
+    // Find second largest element
+    int second = INT_MIN;
+    for (int i = 0; i < arr_size ; i++)
+        if (arr[i] > second && arr[i] < first)
+            second = arr[i];
+ 
+    // Find third largest element
+    int third = INT_MIN;
+    for (int i = 0; i < arr_size ; i++)
+        if (arr[i] > third && arr[i] < second)
+            third = arr[i];
+ 
+    cout<<"The third Largest element is " << third;
+}
+ 
+/* Driver program to test above function */
+int main()
+{
+    int arr[] = {12, 13, 1, 10, 34, 16};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    thirdLargest(arr, n);
+    return 0;
+}
+</pre>
+
+														</div>
+														<div class="tab-pane fade" id="nav-profile5" role="tabpanel" aria-labelledby="nav-profile-tab">
+															<pre class="prettyprint">
+//Java Program to find Third Largest Number in an Array
+
+public class ThirdLargestInArrayExample{  
+public static int getThirdLargest(int[] a, int total){  
+int temp;  
+for (int i = 0; i < total; i++)   
+		{  
+			for (int j = i + 1; j < total; j++)   
+			{  
+				if (a[i] > a[j])   
+				{  
+					temp = a[i];  
+					a[i] = a[j];  
+					a[j] = temp;  
+				}  
+			}  
+		}  
+	   return a[total-3];  
+}  
+public static void main(String args[]){  
+int a[]={1,2,5,6,3,2};  
+int b[]={44,66,99,77,33,22,55};  
+System.out.println("Third Largest: "+getThirdLargest(a,6));  
+System.out.println("Third Largest: "+getThirdLargest(b,7));  
+}}   
+     	</pre>
+														</div>
+														
+													</div>
+
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="col-md-12 text-center">
+				<nav >
+				  <ul class="pagination justify-content-center">
+					<li class="page-item disabled">
+					  <a class="page-link" href="#" tabindex="-1">Previous</a>
+					</li>
+					<li class="page-item active"><a class="page-link" href="#">1</a></li>
+					
+					<li class="page-item disabled">
+					  <a class="page-link" href="#">Next</a>
+					</li>
+				  </ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<!-- /.container -->
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script src="src/jquery/highlighter/prettify.js"></script>
+	<script src="src/jquery/clipbord/clipboard.min.js"></script>
+
+	<script>
+		prettyPrint();
+		new ClipboardJS('.clip');
+		
+
+});
+	</script>
+<!--
+	<script>
+function myFunction() {
+
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+//  table = document.getElementById("myTable");
+//  tr = table.getElementByTagName("tr");
+//  td = tr.getElementByTagName("td");
+  question = document.getElementById("question").innerHTML;
+	for( i = 0;i<question.length;i++)
+		{  
+			if(tr = question.toUpperCase().indexOf(filter) > -1){
+			 (input).style.display = "";
+			}
+			else {
+        (input).style.display = "none";
+      }
+		} 
+//	alert(td.innerHTML);
+//  for (i = 0; i < tr.length; i++) {
+//    td = tr[i].getElementsByTagName("td")[0];
+//    if (td) {
+//      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+//        tr[i].style.display = "";
+//      } else {
+//        tr[i].style.display = "none";
+//      }
+//    }       
+//  }
+}
+
+</script>
+-->
+
+</body>
+
+</html>
