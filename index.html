@@ -7,15 +7,16 @@
 	<meta name="description" content="Learncodeonline.in is a platform to learn about programming and make projects with that knowledge. Access high quality videos at reasonable price.">  
  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
 	<meta name="author" content="Hitesh Choudhary">
-	<link rel="icon" href="/favicon.ico">
+	<link rel="icon" href="../../../../favicon.ico">
 
 	<title>Quiz Page</title>
 
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-	<link rel="stylesheet" href="src/jquery/highlighter/prettify.css">
-	<link rel="canonical" href="https://pmboss.github.io" />
+<!--	<link rel="stylesheet" href="src/jquery/highlighter/prettify.css">-->
+<link rel="stylesheet"
+      href="src/css/atelier-cave-light.css">
 
 	<link rel="stylesheet" href="src/css/style.css">
 	<script src="src/angular/lib/angular1.6.js"></script>
@@ -28,7 +29,7 @@
 	<div class="main" ng-controller="quiz_controller">
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container">
-				<a class="navbar-brand order-1" href="javascript:void(0)" rel="external nofollow" style="margin-right:20px;"><img src="https://learnyst.s3.amazonaws.com/assets/schools/2410/resources/images/logo_lco_4dsl6o.png" style="  height:50px;width: auto;max-width: 250px;" alt="learn code online Image"></a> <button class="navbar-toggler order-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<a class="navbar-brand order-1" href="javascript:void(0)" style="margin-right:20px;"><img src="https://learnyst.s3.amazonaws.com/assets/schools/2410/resources/images/logo_lco_4dsl6o.png" style="  height:50px;width: auto;max-width: 250px;"></a> <button class="navbar-toggler order-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -45,7 +46,7 @@
 						<div class="form-group mb-0 has-feedback input-group">
 							<label for="search" class="sr-only">Search</label>
 							<input class="form-control" id="myInput" onkeyup="myFunction()" name="search " placeholder="search with question Titles" type="text">
-							<div class="input-group-append"><span class="form-control-feedback"><img src="src/img/find-icon-32.png" class="img img-fluid" alt="Learn code online"></span>
+							<div class="input-group-append"><span class="form-control-feedback"><img src="src/img/find-icon-32.png" class="img img-fluid" alt=""></span>
 							</div>
 
 						</div>
@@ -86,14 +87,14 @@
 													<div class="nav nav-tabs" id="nav-tab" role="tablist">
 														<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">C++</a>
 														<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Java</a> 
-														<a class="nav-item nav-link clip float-right" title="Copy to clipbord" data-clipboard-target=".tab-pane.active" style="position: absolute;right: 16px;"><img src="src/img/thin-0255_paste_clipboard-512.png" class="img img-fluid" alt="past to clipboard" width="20px" height="20px"></a>
+														<a class="nav-item nav-link clip float-right" title="Copy to clipbord" data-clipboard-target=".tab-pane.active" style="position: absolute;right: 16px;"><img src="src/img/thin-0255_paste_clipboard-512.png" class="img img-fluid" alt="" width="20px" height="20px"></a>
 													</div>
 												</nav>
 												<div class="tab-content" id="nav-tabContent">
 													<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 														
 
-														<pre  class="prettyprint">
+														<pre><code class="html">
 // C++ Program to print all 
 // palindromes in a given range 
 
@@ -126,12 +127,12 @@ int main()
     countPal(100, 2000);
     return 0;
 }
-</pre>
+</code></pre>
 
 
 													</div>
 													<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-														<pre  class="prettyprint">
+														<pre ><code class="html">
 // Java Program to print all 
 // palindromes in a given range
  
@@ -168,7 +169,7 @@ class GFG
         countPal(100, 2000);
     }
 }
-  	</pre>
+</code>  	</pre>
 													</div>
 												</div>
 
@@ -193,12 +194,12 @@ class GFG
 														<div class="nav nav-tabs" id="nav-tab" role="tablist">
 															<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home2" role="tab" aria-controls="nav-home" aria-selected="true">C++</a>
 															<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile2" role="tab" aria-controls="nav-profile" aria-selected="false">Java</a>
-<a class="nav-item nav-link clip float-right" data-toggle="tooltip" data-placement="top" title="Copy to clipbord" data-clipboard-target=".tab-pane.active" style="position: absolute;right: 16px;"><img src="src/img/thin-0255_paste_clipboard-512.png" class="img img-fluid" alt="clipboard" width="20px" height="20px"></a>
+<a class="nav-item nav-link clip float-right" data-toggle="tooltip" data-placement="top" title="Copy to clipbord" data-clipboard-target=".tab-pane.active" style="position: absolute;right: 16px;"><img src="src/img/thin-0255_paste_clipboard-512.png" class="img img-fluid" alt="" width="20px" height="20px"></a>
 														</div>
 													</nav>
 													<div class="tab-content" id="nav-tabContent">
 														<div class="tab-pane fade show active" id="nav-home2" role="tabpanel" aria-labelledby="nav-home-tab">
-															<pre class="prettyprint">
+															<pre ><code class="html">
 // Fibonacci Series up to n number of terms 
 
 #include &lt;iostream&gt;
@@ -235,11 +236,11 @@ int main()
     return 0;
 }
 
-</pre>
+</code></pre>
 
 														</div>
 														<div class="tab-pane fade" id="nav-profile2" role="tabpanel" aria-labelledby="nav-profile-tab">
-															<pre class="prettyprint">
+															<pre ><code class="html">
 // Java Program to find Fibonacci Series using Recursion
 class fibonacci
 {
@@ -256,7 +257,7 @@ class fibonacci
     System.out.println(fib(n));
     }
 }
-  	</pre>
+  	</code></pre>
 														</div>
 
 													</div>
@@ -283,12 +284,12 @@ class fibonacci
 														<div class="nav nav-tabs" id="nav-tab" role="tablist">
 															<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home3" role="tab" aria-controls="nav-home" aria-selected="true">C++</a>
 															<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile3" role="tab" aria-controls="nav-profile" aria-selected="false">Java</a>
-<a class="nav-item nav-link clip float-right"  title="Copy to clipbord" data-clipboard-target=".tab-pane.active" style="position: absolute;right: 16px;"><img src="src/img/thin-0255_paste_clipboard-512.png" class="img img-fluid" alt="clipboard" width="20px" height="20px"></a>
+<a class="nav-item nav-link clip float-right"  title="Copy to clipbord" data-clipboard-target=".tab-pane.active" style="position: absolute;right: 16px;"><img src="src/img/thin-0255_paste_clipboard-512.png" class="img img-fluid" alt="" width="20px" height="20px"></a>
 														</div>
 													</nav>
 													<div class="tab-content" id="nav-tabContent">
 														<div class="tab-pane fade show active" id="nav-home3" role="tabpanel" aria-labelledby="nav-home-tab">
-															<pre class="prettyprint">
+															<pre ><code class="html">
 // C++ Program to find Factorial of a given number 
 
 #include &lt;iostream&gt;
@@ -311,11 +312,11 @@ int main()
     return 0;
 }
 
-</pre>
+</code></pre>
 
 														</div>
 														<div class="tab-pane fade" id="nav-profile3" role="tabpanel" aria-labelledby="nav-profile-tab">
-															<pre class="prettyprint">
+															<pre ><code class="html">
 // Java program to find factorial of given number
 class Test
 {
@@ -335,7 +336,7 @@ class Test
         System.out.println("Factorial of "+ num + " is " + factorial(5));
     }
 }
-  	</pre>
+  	</code></pre>
 														</div>
 														
 													</div>
@@ -363,12 +364,13 @@ class Test
 														<div class="nav nav-tabs" id="nav-tab" role="tablist">
 															<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home4" role="tab" aria-controls="nav-home" aria-selected="true">C++</a>
 															<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile4" role="tab" aria-controls="nav-profile" aria-selected="false">Java</a>
-<a class="nav-item nav-link clip float-right"  title="Copy to clipbord" data-clipboard-target=".tab-pane.active" style="position: absolute;right: 16px;"><img src="src/img/thin-0255_paste_clipboard-512.png" class="img img-fluid" alt="clipboard" width="20px" height="20px"></a>
+<a class="nav-item nav-link clip float-right"  title="Copy to clipbord" data-clipboard-target=".tab-pane.active" style="position: absolute;right: 16px;"><img src="src/img/thin-0255_paste_clipboard-512.png" class="img img-fluid" alt="" width="20px" height="20px"></a>
 														</div>
 													</nav>
 													<div class="tab-content" id="nav-tabContent">
 														<div class="tab-pane fade show active" id="nav-home4" role="tabpanel" aria-labelledby="nav-home-tab">
-															<pre class="prettyprint">
+															<pre ><code class="html">
+
 // C++ Program of bubble sort 
 
 #include &lt;iostream&gt; 
@@ -401,11 +403,11 @@ int main()
         
     return 0;
 }
-</pre>
+</code></pre>
 
 														</div>
 														<div class="tab-pane fade" id="nav-profile4" role="tabpanel" aria-labelledby="nav-profile-tab">
-															<pre class="prettyprint">
+															<pre ><code class="html">
 // Java program for implementation of Bubble Sort
 class BubbleSort
 {
@@ -443,7 +445,7 @@ class BubbleSort
         ob.printArray(arr);
     }
 }  
-</pre>
+</code></pre>
 														</div>
 
 													</div>
@@ -471,12 +473,12 @@ class BubbleSort
 														<div class="nav nav-tabs" id="nav-tab" role="tablist">
 															<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home5" role="tab" aria-controls="nav-home" aria-selected="true">C++</a>
 															<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile5" role="tab" aria-controls="nav-profile" aria-selected="false">Java</a>
-<a class="nav-item nav-link clip  " title="Copy to clipbord" data-clipboard-target=".tab-pane.active"  style="position: absolute;right: 16px;"><img src="src/img/thin-0255_paste_clipboard-512.png "  class="img img-fluid" alt="clipboard" width="20px" height="20px"></a>
+<a class="nav-item nav-link clip  " title="Copy to clipbord" data-clipboard-target=".tab-pane.active"  style="position: absolute;right: 16px;"><img src="src/img/thin-0255_paste_clipboard-512.png "  class="img img-fluid" alt="" width="20px" height="20px"></a>
 														</div>
 													</nav>
 													<div class="tab-content" id="nav-tabContent">
 														<div class="tab-pane fade show active" id="nav-home5" role="tabpanel" aria-labelledby="nav-home-tab">
-															<pre class="prettyprint">
+															<pre ><code class="html">
 // C++ program to find third Largest element in an array
 #include &lt;bits/stdc++.h&gt;
  
@@ -518,11 +520,11 @@ int main()
     thirdLargest(arr, n);
     return 0;
 }
-</pre>
+</code></pre>
 
 														</div>
 														<div class="tab-pane fade" id="nav-profile5" role="tabpanel" aria-labelledby="nav-profile-tab">
-															<pre class="prettyprint">
+															<pre><code class="html">
 //Java Program to find Third Largest Number in an Array
 
 public class ThirdLargestInArrayExample{  
@@ -548,7 +550,7 @@ int b[]={44,66,99,77,33,22,55};
 System.out.println("Third Largest: "+getThirdLargest(a,6));  
 System.out.println("Third Largest: "+getThirdLargest(b,7));  
 }}   
-     	</pre>
+     	</code></pre>
 														</div>
 														
 													</div>
@@ -589,52 +591,16 @@ System.out.println("Third Largest: "+getThirdLargest(b,7));
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-	<script src="src/jquery/highlighter/prettify.js"></script>
+	<script src="src/jquery/highlight.pack.js"></script>
 	<script src="src/jquery/clipbord/clipboard.min.js"></script>
-
 	<script>
-		prettyPrint();
 		new ClipboardJS('.clip');
-		
-
+		$(document).ready(function() {
+  		$('pre code').each(function(i, block) {
+			hljs.highlightBlock(block);
+  });
 });
 	</script>
-<!--
-	<script>
-function myFunction() {
-
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-//  table = document.getElementById("myTable");
-//  tr = table.getElementByTagName("tr");
-//  td = tr.getElementByTagName("td");
-  question = document.getElementById("question").innerHTML;
-	for( i = 0;i<question.length;i++)
-		{  
-			if(tr = question.toUpperCase().indexOf(filter) > -1){
-			 (input).style.display = "";
-			}
-			else {
-        (input).style.display = "none";
-      }
-		} 
-//	alert(td.innerHTML);
-//  for (i = 0; i < tr.length; i++) {
-//    td = tr[i].getElementsByTagName("td")[0];
-//    if (td) {
-//      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-//        tr[i].style.display = "";
-//      } else {
-//        tr[i].style.display = "none";
-//      }
-//    }       
-//  }
-}
-
-</script>
--->
-
 </body>
 
 </html>
