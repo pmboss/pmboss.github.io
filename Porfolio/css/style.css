@@ -318,17 +318,24 @@
 		}
 
 		.enquiry {
+			position: relative;
+		}
+		.enquiry::before {
+			content: '';position: absolute;
 			background-image: url(../images/oie_transparent.png);
 			background-repeat: no-repeat;
 			-webkit-background-size: cover;
-			background-size: cover;
-			/*	background-position: 0 -276px;*/
+			background-size: cover; top: -110px;  
+			width: 100%;height: 115%; 
 		}
-
+		.enquiry-intro
+		{
+				transform: translate(0%,-50%);
+		}
 		.parallex-5 {
-			background-image: url(../images/whatcanidoforyou3.gif);
+			background: url(../images/whatcanidoforyou3.gif) center;
 			-webkit-background-size: cover;
-			background-size: cover;
+			background-size: 80%;
 			background-repeat: no-repeat;
 			background-attachment: fixed;
 		}
